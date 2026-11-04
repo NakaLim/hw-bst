@@ -10,7 +10,7 @@ class Node():
     You do not have to implement anything within this class.
     Given a node t, you can visualize the node by running str(t) in the python interpreter.
     This is a key method to perform debugging,
-    so you should get familiar with how to visualize these strings..
+    so you should get familiar with how to visualize these strings....
     '''
 
     def __init__(self, value, left=None, right=None):
