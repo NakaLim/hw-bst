@@ -21,7 +21,7 @@ class Node():
 
     def assert_invariants(self):
         if self.left is not None:
-            assert isinstance(self.left, Node),f"left child must be a Node, got {type(self.left)}"
+            assert isinstance(self.left, Node), f"left child must be a Node, got {type(self.left)}"
         if self.right is not None:
             assert isinstance(self.right, Node), f"right child must be a Node, got {type(self.right)}"
 
@@ -37,6 +37,7 @@ class Node():
             out += str(self.right)
         out += ')'
         return out
+
 
 class BinaryTree():
     '''
