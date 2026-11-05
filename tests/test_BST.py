@@ -136,6 +136,7 @@ def test__BST___contains__2(xs):
         for i in range(1000):
             x = random.uniform(min(xs)-1,max(xs)+1)
             if x not in xs:
+                assert x not in bst
 
 
 @given(xs=ints)
