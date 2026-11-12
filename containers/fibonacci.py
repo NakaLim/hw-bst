@@ -62,12 +62,15 @@ class Fib:
     '''
     def __init__(self, n=None):
         self.n = n
+
     def __iter__(self):
         return FibIter(self.n)
+
     def __repr__(self):
         if self.n is None:
             return "Fib()"
         return f"Fib({self.n})"
+
     def __str__(self):
         return self.__repr__()
 
@@ -81,8 +84,10 @@ class FibIter:
         self.count = 0
         self.a = 1
         self.b = 1
+
     def __iter__(self):
         return self
+
     def __next__(self):
         if self.n is not None and self.count >= self.n:
             raise StopIteration

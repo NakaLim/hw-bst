@@ -114,6 +114,7 @@ class AVLTree(BST):
         but it will also call the left and right rebalancing functions.
         '''
         self.root = AVLTree._insert(value, self.root)
+
     @staticmethod
     def _insert(value, node):
         if node is None:
