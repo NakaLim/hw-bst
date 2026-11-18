@@ -70,8 +70,8 @@ class Heap(BinaryTree):
             return False
         if node.right is not None and node.right.value < node.value:
             return False
-        return (Heap._is_heap_satisfied(node.left) and
-                Heap._is_heap_satisfied(node.right))
+        return (Heap._is_heap_satisfied(node.left)
+                and Heap._is_heap_satisfied(node.right))
 
     def insert(self, value):
         '''
@@ -96,7 +96,7 @@ class Heap(BinaryTree):
         if self.root is None:
             self.root = Node(value)
         else:
-            path = bin(self.size) [3:]
+            path = bin(self.size)[3:]
             Heap._insert(self.root, value, path)
 
     @staticmethod
@@ -165,7 +165,7 @@ class Heap(BinaryTree):
             self.root = None
             self.size = 0
             return
-        path = bin(self.size) [3:]
+        path = bin(self.size)[3:]
         value = Heap._remove_bottom_right(self.root, path)
         self.root.value = value
         self.size -= 1
