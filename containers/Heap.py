@@ -70,8 +70,7 @@ class Heap(BinaryTree):
             return False
         if node.right is not None and node.right.value < node.value:
             return False
-        return (Heap._is_heap_satisfied(node.left)
-                and Heap._is_heap_satisfied(node.right))
+        return (Heap._is_heap_satisfied(node.left) and Heap._is_heap_satisfied(node.right))
 
     def insert(self, value):
         '''
